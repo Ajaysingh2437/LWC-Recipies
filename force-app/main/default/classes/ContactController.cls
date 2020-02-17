@@ -1,6 +1,7 @@
 public with sharing class ContactController {
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactList() {
+        System.System.debug('Hello All');
         return [
             SELECT Id, Name, Title, Phone, Email, Picture__c
             FROM Contact
